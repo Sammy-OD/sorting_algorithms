@@ -155,8 +155,10 @@ void insertion_sort_deck_value(deck_node_t **deck)
 			if (iter->next != NULL)
 				/* Adjust the previous pointer of the following node */
 				iter->next->prev = insert;
-			/* Set the previous pointer of the current node to the
-			previous of the preceding node */
+			/*
+			 * Set the previous pointer of the current node to the
+			 * previous of the preceding node
+			*/
 			iter->prev = insert->prev;
 			/* Set the next pointer of the current node to the preceding node */
 			iter->next = insert;
