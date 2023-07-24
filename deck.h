@@ -1,26 +1,33 @@
 #ifndef DECK_H
 #define DECK_H
 
+typedef enum kind_e
+{
+	SPADE = 0,
+	HEART,
+	CLUB,
+	DIAMOND
+} kind_t;
+
 /**
- * struct card_s - Representation of a card in a deck
- * @value: Value of the card (e.g., "King", "Queen", "10")
- * @kind: Kind of the card (e.g., "Spades", "Hearts", "Diamonds")
+ * struct card_s - Playing card
  *
- * Description: A playing card in a deck with a value and a kind.
+ * @value: Value of the card
+ * From "Ace" to "King"
+ * @kind: Kind of the card
  */
 typedef struct card_s
 {
 	const char *value;
-	const char *kind;
+	const kind_t kind;
 } card_t;
 
 /**
- * struct deck_node_s - Doubly-linked list representation of a deck
- * @card: Pointer to the card of the node
- * @prev: Pointer to the previous node in the deck
- * @next: Pointer to the next node in the deck
+ * struct deck_node_s - Deck of card
  *
- * Description: A doubly-linked list node representing a card in a deck.
+ * @card: Pointer to the card of the node
+ * @prev: Pointer to the previous node of the list
+ * @next: Pointer to the next node of the list
  */
 typedef struct deck_node_s
 {
