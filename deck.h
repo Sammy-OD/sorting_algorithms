@@ -1,6 +1,16 @@
 #ifndef DECK_H
 #define DECK_H
 
+/**
+ * enum kind_e - Kinds (suits) of playing cards in a deck
+ * @SPADE: Represents the suit of Spades.
+ * @HEART: Represents the suit of Hearts.
+ * @CLUB: Represents the suit of Clubs.
+ * @DIAMOND: Represents the suit of Diamonds.
+ *
+ * Description: Each card in a deck belongs to one of these kinds.
+ */
+
 typedef enum kind_e
 {
 	SPADE = 0,
