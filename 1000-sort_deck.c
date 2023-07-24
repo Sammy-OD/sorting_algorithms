@@ -17,8 +17,10 @@ void sort_deck(deck_node_t **deck);
  */
 int _strcmp(const char *s1, const char *s2)
 {
-	/* Compare characters until a difference is found or
-	the end of a string is reached */
+	/**
+	 * Compare characters until a difference is found or
+	 * the end of a string is reached
+	 */
 	while (*s1 && *s2 && *s1 == *s2)
 	{
 		/* Move to the next character in s1 */
@@ -96,8 +98,10 @@ void insertion_sort_deck_kind(deck_node_t **deck)
 	{
 		tmp = iter->next;
 		insert = iter->prev;
-		/* Move the current card towards the beginning of the suit until
-		it is in the correct position */
+		/**
+		 * Move the current card towards the beginning of the suit until
+		 * it is in the correct position
+		 */
 		while (insert != NULL && insert->card->kind > iter->card->kind)
 		{
 			/* Set the next node of insert to the next node of iter */
@@ -161,8 +165,10 @@ void insertion_sort_deck_value(deck_node_t **deck)
 				/* Adjust the next pointer of the preceding node */
 				insert->prev->next = iter;
 			else
-				/* Update the head of the deck if the preceding node is NULL
-				(indicating it is the new head) */
+				/**
+				 * Update the head of the deck if the preceding node is NULL
+				 * (indicating it is the new head)
+				 */
 				*deck = iter;
 			/* Set the previous pointer of the preceding node to the current node */
 			insert->prev = iter;
