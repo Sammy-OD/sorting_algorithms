@@ -10,8 +10,8 @@
  */
 typedef struct card_s
 {
-    const char *value;
-    const char *kind;
+	const char *value;
+	const char *kind;
 } card_t;
 
 /**
@@ -24,9 +24,9 @@ typedef struct card_s
  */
 typedef struct deck_node_s
 {
-    const card_t *card;
-    struct deck_node_s *prev;
-    struct deck_node_s *next;
+	const card_t *card;
+	struct deck_node_s *prev;
+	struct deck_node_s *next;
 } deck_node_t;
 
 /* Function prototypes */
