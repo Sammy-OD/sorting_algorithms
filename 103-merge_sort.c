@@ -17,22 +17,22 @@ void merge_subarr(int *sarr, int *buff, size_t front, size_t mid, size_t back)
 	size_t i, j, k = 0;
 
 	printf("Merging...\n[left]: ");
-	print_array(subarr + front, mid - front);
+	print_array(sarr + front, mid - front);
 
 	printf("[right]: ");
-	print_array(subarr + mid, back - mid);
+	print_array(sarr + mid, back - mid);
 
 	for (i = front, j = mid; i < mid && j < back; k++)
-		buff[k] = (subarr[i] < subarr[j]) ? subarr[i++] : subarr[j++];
+		buff[k] = (sarr[i] < sarr[j]) ? sarr[i++] : sarr[j++];
 	for (; i < mid; i++)
-		buff[k++] = subarr[i];
+		buff[k++] = sarr[i];
 	for (; j < back; j++)
-		buff[k++] = subarr[j];
+		buff[k++] = sarr[j];
 	for (i = front, k = 0; i < back; i++)
-		subarr[i] = buff[k++];
+		sarr[i] = buff[k++];
 
 	printf("[Done]: ");
-	print_array(subarr + front, back - front);
+	print_array(sarr + front, back - front);
 }
 
 /**
